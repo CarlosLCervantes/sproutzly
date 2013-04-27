@@ -1,3 +1,24 @@
-// Place all the styles related to the dashboard controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$light-green: #7EBC56;
+$dark-green: #00661A;
+
+div#dashboard {
+	div.work-item {
+		border: 3px solid $dark-green;
+		background-color: $light-green;
+		opacity: .85;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+
+		width: 800px;
+		margin: auto;
+	}
+	h2 {
+		display: inline-block;
+		margin-left: 15px;
+	}
+	div.status_item {
+		padding: 10px;
+		color: #FFFFFF;
+	}
+}
