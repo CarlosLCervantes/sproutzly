@@ -1,5 +1,26 @@
-div#fuck {
-	h1 {
-		color: red;
-	}
+div.header {
+   background-image: url('/assets/home/banner.png');
+   width: 1000px;
+   height: 360px;
+
+   .overlay{
+      margin-left: 20px;
+   }
+
+   .topLeftLogo{
+      background-image: url('/assets/home/logoSmall.png');
+      width: 200px;
+      height: 68px;
+   }
+
+   .getGrowingBg{
+      // background-color: black;
+      background: rgba(0, 0, 0, 0.4);
+      width: 700px;
+      height: 225px;
+      margin-top: 12px;
+      font-family: 'myriad pro';
+      color: white;
+
+   }
 }
