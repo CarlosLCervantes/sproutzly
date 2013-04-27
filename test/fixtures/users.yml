@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: 
+  password: 
+  facebook_ur: 
+  website: 
+  last_login: 2013-04-27 14:30:14
+
+two:
+  email: 
+  password: 
+  facebook_ur: 
+  website: 
+  last_login: 2013-04-27 14:30:14

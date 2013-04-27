@@ -1,0 +1,17 @@
+# config/application.yml
+defaults: &defaults
+  flat_rate_cost: 99
+  follow_count: 2500
+  like_count: 500
+
+test:
+  <<: *defaults
+
+development:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults
