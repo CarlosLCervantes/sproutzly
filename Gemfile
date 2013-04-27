@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
+gem 'mongoid'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 
 
 # Gems used only for assets and not required
@@ -20,6 +20,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'settingslogic' #Used for configuration management
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

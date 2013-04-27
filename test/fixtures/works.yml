@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  status_id: 
+  assigned_to: 
+  type_id: 
+  type_desc: 
+  note: MyString
+
+two:
+  status_id: 
+  assigned_to: 
+  type_id: 
+  type_desc: 
+  note: MyString

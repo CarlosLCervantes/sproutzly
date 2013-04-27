@@ -1,0 +1,12 @@
+<h1>Follow our 5 step program to get growing</h1>
+
+<div id="item-twitter" class="work-item">
+	<div class="status_item">
+		<%= image_tag "" %>
+		<h2>Get <%=  number_with_delimiter(Settings.follow_count, :delimiter => ',')  %> Twitter followers</h2>
+	</div>
+	<div class="action-item">
+		<%= text_field_tag :twitter_handle, @twitter_handle, :placeholder => "@Sproutzly" %>
+		<%= button_tag "Submit", :class => "btn btn-primary btn-large" %>
+	</div>
+</div>
