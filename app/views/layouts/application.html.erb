@@ -43,9 +43,11 @@
             <ul class="nav">
             </ul>
             <ul class="nav pull-right">
-              <li><%= link_to "Addons", addons_path  %></li>
-              <li><%= link_to "Settings", "/settings", :class => "nl"  %></li>
-              <li><%= link_to "Logout", logout_path, :class => "nl" %></li>
+              <% if(current_user) %>
+                <li><%= link_to "Addons", addons_path  %></li>
+                <li><%= link_to "Settings", "/settings", :class => "nl"  %></li>
+                <li><%= link_to "Logout", logout_path, :class => "nl" %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

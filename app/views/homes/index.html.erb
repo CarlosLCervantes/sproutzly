@@ -1,7 +1,11 @@
 <div class="">
   <div class="header">
     <div class="nav">
-      <a href="<%= login_path %>"><div id="btnLogin" class="nav-item">Login</div></a>
+      <% unless(current_user) %>
+        <a href="<%= login_path %>">
+          <div id="btnLogin" class="nav-item">Login</div>
+        </a>
+      <% end %>
       <!-- <div id="btnGoPro" class="nav-item">Go Pro</div> -->
     </div>
     <div class="overlay">
@@ -23,7 +27,7 @@
 
   <div class="container containerBody">
     <br />
-    <p class="bodyText">Not everyone can afford their own growth hacking team. It takes a special blend of expertise to execute an effective strategy. <span class="green">Sproutzly</span> will walk you through 5 essential steps to get your online brand or business essential exposure, influence, and growth.</p>
+    <p class="bodyText" style="margin-left:-22px;">Not everyone can afford their own growth hacking team. It takes a special blend of expertise to execute an effective strategy. <br /><span class="green">Sproutzly</span> will walk you through 5 essential steps to get your online brand or business essential exposure, influence, and growth.</p>
 
 
     <div class="badages">
@@ -36,9 +40,8 @@
             <img src="/assets/home/twitterCircle.png" alt="">
           </div>
 
-          <div class="badageText span8">
-            <p>Your first 1,000 Twitter followers. Get social proof immediately with
-                our high quality twitter followers.
+          <div class="badageText span9">
+            <p>Your first <%= Settings.follow_count %> Twitter followers. Get social proof immediately withour high quality twitter followers.
             </p>
           </div>
         </div>
@@ -55,9 +58,8 @@
             <img src="/assets/home/facebookCircle.png" alt="">
           </div>
 
-          <div class="badageText span8">
-            <p>Your first 500 Facebook fans. No one wants to be the first person to
-               try something out. We get you 500 quality FB fans for your brand, application, or online presence.
+          <div class="badageText span9">
+            <p>Your first 500 Facebook fans. No one wants to be the first person to try something out. We get you 500 quality FB fans for your brand, application, or online presence.
             </p>
           </div>
         </div>
@@ -74,7 +76,7 @@
           <img src="/assets/home/influenceCircle.png" alt="">
         </div>
 
-        <div class="badageText span8">
+        <div class="badageText span9">
           <p>Get connected to key influencers in your market. Our network of key influencers will tweet about your online brand. Getting you essential influence, exposure, and value.
           </p>
         </div>
@@ -92,7 +94,7 @@
             <img src="/assets/home/placeholderCircle.png" alt="">
           </div>
 
-          <div class="badageText span8">
+          <div class="badageText span9">
             <p>Gain access to a library of over 100 growth hacks.</p>
           </div>
         </div>
@@ -109,8 +111,8 @@
             <img src="/assets/home/growthCircle.png" alt="">
           </div>
 
-          <div class="badageText span8">
-            <p>Effective growth hacking means getting coming up with effective strategies for your specific situation. Our experienced growth hacking team will come up with a personalized strategy for you to impliment yourself.
+          <div class="badageText span9">
+            <p>Effective growth hacking means getting coming up with effective strategies for your specific goals. Our experienced growth hackers will come up with a personalized strategy for you to impliment.
             </p>
           </div>
         </div>
@@ -131,7 +133,7 @@
     </div> <!--end badages-->
     <div class="row newsletter" style="text-align:center">
       <p class="call">Sign up for our Newsletter and get great advice for building your online brand and special promotions!</p>
-      <%= text_field_tag :newsletter_email, "", :class => "txt-newsletter", :placeholder => "YourEmail@website.com" %>
+      <%= text_field_tag :newsletter_email, "", :class => "txt-newsletter", :placeholder => "your.email@website.com" %>
       <%= button_tag "Subscribe", :id => "btnSubscribeNewsletter", :class => "btn btn-primary btn-large" %>
       <br />
       Powered By: <%= image_tag "http://nonna-template.startupweekend.org/files/2012/01/SendGrid.png" %>
