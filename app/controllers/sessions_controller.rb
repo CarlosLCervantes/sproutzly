@@ -10,14 +10,15 @@ class SessionsController < ApplicationController
 
   def create
     #@session = Session.new(params[:session])
-    @user = User.where(:email => params[:email], :password => params[:password])
+    @user = User.where(:email => params[:email], :password => params[:password]).first
 
     respond_to do |format|
       if @user
+        session[:current_user_id] = @user.id
         format.html { redirect_to dashboard_url, notice: 'You are now logged in' }
         #format.json { render json: @session, status: :created, location: @session }
       else
-        format.html { render action: "new", error: 'Login failed' }
+        format.html { render action: "new", notice: 'Login failed' }
         #format.json { render json: @session.errors, status: :unprocessable_entity }
       end
     end

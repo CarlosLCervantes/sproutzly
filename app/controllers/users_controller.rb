@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @user = User.new
 
     respond_to do |format|
-      format.html #{ render action: "new", layout: nil }
+      format.html { render action: "new", layout: nil }
       format.json { render json: @user }
     end
   end

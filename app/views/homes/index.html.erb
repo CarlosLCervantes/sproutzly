@@ -1,35 +1,28 @@
-<div class="container">
-
+<div class="">
   <div class="header">
-
     <div class="nav">
-      <div id="btnLogin" class="nav-item">Login</div>
+      <a href="<%= login_path %>"><div id="btnLogin" class="nav-item">Login</div></a>
       <div id="btnGoPro" class="nav-item">Go Pro</div>
     </div>
-
     <div class="overlay">
-
       <div class="topLeftLogo"></div>
-
-
       <div class="getGrowingBg">
-
         <div class="getGrowingText">
           <h1>Get Growing Online Today</h1>
           <h2>Your own growth hacking team for only $<%= Settings.flat_rate_cost %></h2>
         </div>
-
         <div class="startGrowingBtnTop">
-          <a href="/dashboard"><img src="/assets/home/btnStartGrowing.png"></a>
+          <a class="btn-continue" href="javascript:void(0);">
+            <img src="/assets/home/btnStartGrowing.png">
+          </a>
         </div>
-
       </div>
     </div>
   </div>
 
 
-  <div class="containerBody">
-    <br>
+  <div class="container containerBody">
+    <br />
     <p class="bodyText">Not everyone can afford their own growth hacking team. It takes a special blend of expertise to execute an effective strategy. <span class="green">Sproutzly</span> will walk you through 5 essential steps to get your online brand influence, visitors, and users.</p>
 
 
@@ -100,8 +93,7 @@
           </div>
 
           <div class="badageText span8">
-            <p>Not 100% sure what the 4th item is.
-            </p>
+            <p>Gain access to a library of over 100 growth hacks.</p>
           </div>
         </div>
 
@@ -130,7 +122,9 @@
     <div class="badageRow row">
       <div class="span12 bottomRow">
         <p>Get all this an more for only $<%= Settings.flat_rate_cost %> flat rate.</p>
-        <img src="/assets/home/btnStartGrowing.png" alt="" >
+        <a class="btn-continue" href="javascript:void(0);">
+          <img src="/assets/home/btnStartGrowing.png" alt="" >
+        </a>
       </div>
     </div> <!-- end badageRow -->
 
@@ -139,24 +133,3 @@
   </div> <!--end containerBody-->
 
 </div> <!--end container-->
-
-
-
-
-
-
-
-dashboard_url
-
-
-
-
-
-
-
-
-
-
-
-
-
