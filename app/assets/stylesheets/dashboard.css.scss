@@ -1,6 +1,9 @@
 @import "master";
 
 div#dashboard {
+	h1.title {
+		text-align: center;
+	}
 	div.work-item {
 		border: 3px solid $dark-green;
 		background-color: $light-green;
@@ -15,21 +18,31 @@ div#dashboard {
 	}
 	h2 {
 		display: inline-block;
-		margin-left: 15px;
+		//margin-left: 15px;
 		font-size: 33px;
 	}
 	div.status_item {
+		.fresh{
+			margin-top: 20px;
+		}
 		padding: 16px 10px 20px 10px;
-		border-bottom: dotted 3px #00661a;
+		//border-bottom: dotted 3px #00661a;
+		img {
+			vertical-align: top;
+		}
 
 		button {
 			margin-top: 28px;
-			// float: right;
+			float: right;
 		}
 	}
 
 	div.status-box {
-		float: right;
+		vertical-align: middle;
+		//float: right;
+		//border: 1px solid red;
+		margin-left: 15px;
+		display: inline-block;
 	}
 
 	textarea.txt-growth {
@@ -48,6 +61,7 @@ div#dashboard {
 	div.action-item{
 		padding: 10px;
 		display: none;
+		border-top: dotted 3px #00661a;
 	}
 
 	.txt-email{

@@ -1,0 +1,30 @@
+<div class="inf-item">
+	<%= image_tag influencer.image_url, :class => "pic" %>
+	<br />
+	<p class="name"><%= "#{influencer.first_name} #{influencer.last_name}" %></p>
+	<p class="company"><%= influencer.company %></p>
+	<% if(influencer.twitter_url) %>
+		<a href="<%= influencer.twitter_url %>" target="_blank">
+			<%= image_tag "home/twitterCircle.png", :class => "social-icon" %>
+		</a>
+	<% end %>
+	<% if(influencer.facebook_url) %>
+		<a href="<%= influencer.facebook_url %>" target="_blank">
+			<%= image_tag "home/facebookCircle.png", :class => "social-icon" %>
+		</a>
+	<% end %>
+	<% if(influencer.blog_url) %>
+		<a href="<%= influencer.blog_url %>" target="_blank">
+			<%= button_tag "Blog", :class => "btn btn-info" %>
+		</a>
+	<% end %>
+	<br /><br />
+	<%= button_tag "ADVICE", :class => "btn-select-advice-influencer btn btn-advice", :data => {:id => influencer.id} %>
+	<% if(influencer.twitter_url) %>
+		<%= button_tag "TWEET", :class => "btn-select-tweet-influencer btn btn-tweet", :data => {:id => influencer.id} %>
+	<% end %>
+	<% if(influencer.blog_url) %>
+		<%= button_tag "POST", :class => "btn-select-tweet-influencer btn btn-post", :data => {:id => influencer.id} %>
+	<% end %>
+
+</div>

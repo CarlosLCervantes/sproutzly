@@ -1,0 +1,21 @@
+<h1>Listing influencers</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @influencers.each do |influencer| %>
+  <tr>
+    <td><%= link_to 'Show', influencer %></td>
+    <td><%= link_to 'Edit', edit_influencer_path(influencer) %></td>
+    <td><%= link_to 'Destroy', influencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Influencer', new_influencer_path %>
