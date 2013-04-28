@@ -48,21 +48,26 @@ div.header {
    .getGrowingBg{
       // background-color: black;
       background: rgba(0, 0, 0, 0.4);
-      width: 700px;
-      height: 225px;
+      width: 662px;
+      height: 195px;
       margin-top: 12px;
       font-family: "myriad pro";
       color: white;
-      padding:15px;
+      padding:17px;
 
       .getGrowingText {
 
         h1{
-          font-size: 50px;
+          font-family: 'Varela Round';
+          font-size: 48px;
+          text-shadow: 2px 4.5px 4px #000000;
+          filter: dropshadow(color=#000000, offx=5, offy=2);
+          font-weight: none;
         }
 
         h2{
-          font-size: 33px;
+          font-size: 25px;
+          font-family: verdana;
         }
 
       }
@@ -88,6 +93,8 @@ div.containerBody{
     text-align:center;
     width: 900px;
     margin:auto;
+    font-family: georgia;
+    line-height: 26px;
 
     .green{
       color:#439700;
@@ -109,6 +116,11 @@ div.containerBody{
   .badageAndText{
     display: inline-block;
     margin-left: 55px;
+
+    p{
+      font-family: "FF Nuvo Web Pro";
+      font-weight: bold;
+    }
 
   }
 
