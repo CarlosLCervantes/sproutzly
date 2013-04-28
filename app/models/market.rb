@@ -3,5 +3,5 @@ class Market
   field :name, type: String
   field :desc, type: String
 
-  has_many :influencers
+  has_many :influencers, :foreign_key => "market_id"
 end

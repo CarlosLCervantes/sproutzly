@@ -17,3 +17,35 @@
 //= require flat-ui
 //= require bootstrap-modalmanager
 //= require bootstrap-modal
+
+$(document).ready(function() {
+	$("a.btn-continue").bind("click", continueToDash);
+});
+
+function continueToDash() {
+	var self = $(this);
+	checkLogin();
+}
+
+function checkLogin() {
+	debug("logged in: " + logged_in);
+	if(!logged_in) {
+		showSignup();
+	}
+	else {
+		window.location = "/dashboard";
+	}
+}
+
+function showSignup() {
+	$.ajax({
+		url: "/register",
+		method: "GET",
+		success: function(response) {
+			create_dynamic_modal(response).modal('show');
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			alert("error");s
+		}
+	});
+}

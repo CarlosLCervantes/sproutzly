@@ -20,17 +20,7 @@
     <%#= render 'shared/ga' %>
   </head>
   <body>
-    <!--Says to include fb js right after body tag-->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <div class="navbar navbar-fluid-top">
+    <div class="navbar navbar-header navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -38,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<%= root_url %>">
+          <a class="brand" href="<%= dashboard_url %>">
             <%= image_tag("logos/logo_horiz.png", :class => "main-logo") %>
           </a>
           <div class="container-fluid nav-collapse">
@@ -64,49 +54,7 @@
 
     </div> <!-- /container -->
 
-    <footer>
-      <div class="navbar navbar-fluid-top">
-        <div class="navbar-inner">
-          <div class="container-fluid">
-            <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="<%= root_url %>">
-            </a>
-            <div class="container-fluid nav-collapse">
-              <ul class="nav">
-                <li><%= link_to "Terms & Conditions", "/settings", :class => "nl"  %></li>
-                <li><%= link_to "Privacy Policy", logout_path, :class => "nl" %></li>
-              </ul>
-              <ul class="nav pull-right">
-
-                <li>
-
-                  <div class="footer-btn-twitter-fb footer-btn-twitter-fb-spacer">
-                    <a href="https://twitter.com/sproutzly" class="twitter-follow-button" data-show-count="true">Follow @sproutzly</a>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="footer-btn-twitter-fb">
-
-                  <div id="fb-root"></div>
-
-
-                 <div class="fb-like" data-href="http://www.facebook.com/Sproutzly" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-font="verdana"></div>
-                </li>
-
-                <!--<li><%#= link_to "Link3", "/path3"  %></li> -->
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </div>
-      </div>
-    </footer>
-
-
+    <%= render 'shared/footer' %>
 
     <!-- Javascripts
     ================================================== -->

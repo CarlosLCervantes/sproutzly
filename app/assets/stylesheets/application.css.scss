@@ -15,6 +15,10 @@
  *= bootstrap/bootstrap-overrides
  */
 
+body {
+  background-image: url('/assets/pattern/hexellence.png');
+}
+
 img.main-logo {
  	width: 125px;
  	margin: 0px;
@@ -28,6 +32,28 @@ img.main-logo {
  .dk_container {
  	width: 200px;
  }
+
+p.bodyText{
+  font-size: 17px;
+  text-align:center;
+  width: 980px;
+  margin:auto;
+  font-family: georgia;
+  line-height: 26px;
+}
+
+.highlight {
+  color:#439700;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 2px 3px 3px #000000;
+  filter: dropshadow(color=#000000, offx=5, offy=2);
+}
+
+.green{
+  color:#439700;
+  font-weight: bold;
+}
 
 div.footer-btn-twitter-fb{
   padding-top: 16px;

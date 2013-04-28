@@ -9,7 +9,7 @@ class Work
 
   embedded_in :user
 
-  validates_presence_of :status_id
+  #validates_presence_of :status_id
   validates_presence_of :type_id
 
   def update_to_created

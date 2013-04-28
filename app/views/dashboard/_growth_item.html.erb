@@ -1,16 +1,18 @@
 <div id="item-growth" class="work-item">
 	<div class="status_item">
 		<%= image_tag "home/growthCircle.png" %>
-		<h2>Get a Growth Strategy</h2>
-		<div class="status-box">
+		<% box_class = (@growth_work_item) ? "status-box" : "status-box fresh" %>
+		<div class="<%= box_class %>">
+			<h2>Get a&nbsp;<span class="highlight">Custom</span>&nbsp; Growth Strategy</h2>
 			<% if(@growth_work_item) %>
 				<% if(@growth_work_item.done?) %>
 					<h3>Work Complete!</h3>
 				<% end %>
-			<% else %>
-				<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
 			<% end %>
 		</div>
+		<% unless(@growth_work_item) %>
+			<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
+		<% end %>
 	</div>
 	<% unless(@growth_work_item) %>
 		<div class="action-item">

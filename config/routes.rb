@@ -10,6 +10,8 @@ Sproutzly::Application.routes.draw do
   match 'logout' => 'sessions#destroy'
   resources :users
   resources :works
+  resources :influencers
+  match 'library' => 'library#index', :as => :library
 
   namespace :admin do
     root :to => 'dashboards#index'

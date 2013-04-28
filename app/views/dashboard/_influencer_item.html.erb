@@ -1,29 +1,36 @@
 <div id="item-influence" class="work-item">
 	<div class="status_item">
 		<%= image_tag "home/influenceCircle.png" %>
-		<h2>Get Connected with a Key Influencer</h2>
-		<div class="status-box">
+		<% box_class = (@influencer_work_item) ? "status-box" : "status-box fresh" %>
+		<div class="<%= box_class %>">
+			<h2>Connect with a Key <span class="highlight">Influencer</span></h2>
 			<% if(@influencer_work_item) %>
 				<% if(@influencer_work_item.done?) %>
 					<h3>Work Complete!</h3>
 				<% elsif(@influencer_work_item) %>
 					<h3>Work in Progress...</h3>
 					<p>Work can take up to 5 days to completely process</p>
-				<%# else %>
-					<!-- <button>Cancel</button> -->
 				<% end %>
-			<% else %>
-				<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
 			<% end %>
 		</div>
+		<% unless(@influencer_work_item) %>
+			<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
+		<% end %>
 	</div>
 	<% unless(@influencer_work_item) %>
 		<div class="action-item">
-			<div class="action_text">
-				<p>Select the market for your target influencer</p>
+			<div class="inf-step-1">
+				<div class="action_text">
+					<p>Select the market for your target influencer</p>
+				</div>
+				<%= select_tag :market, options_for_select(@markets.collect{ |m| [m.name, m.id] }) %>
+				<%= button_tag "SELECT", :class => "btn-email btn-select-inf-market btn btn-primary btn-large" %>
 			</div>
-			<%= select_tag :market, options_for_select(@markets.collect{ |m| [m.name, m.id] }) %>
-			<%= button_tag "SELECT", :class => "btn-email btn-select-market btn btn-primary btn-large" %>
+			<div class="inf-step-2" style="display:none">
+				<p>Select an Influencer to get connected with</p>
+				<div class="influencers"></div>
+				<br class="clear" />
+			</div>
 		</div>
 	<% end %>
 </div>

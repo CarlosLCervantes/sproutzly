@@ -1,8 +1,9 @@
 <div id="item-twitter" class="work-item">
 	<div class="status_item">
 		<%= image_tag "home/twitterCircle.png" %>
-		<h2>Get <%=  number_with_delimiter(Settings.follow_count, :delimiter => ',')  %> Twitter followers</h2>
-		<div class="status-box">
+		<% box_class = (@twitter_work_item) ? "status-box" : "status-box fresh" %>
+		<div class="<%= box_class %>">
+			<h2>Get&nbsp;&nbsp;<span class="highlight"><%= number_with_delimiter(Settings.follow_count, :delimiter => ',') %></span>&nbsp;&nbsp;Twitter followers</h2>
 			<% if(@twitter_work_item) %>
 				<% if(@twitter_work_item.done?) %>
 					<h3>Work Complete!</h3>
@@ -12,10 +13,11 @@
 				<%# else %>
 					<!-- <button>Cancel</button> -->
 				<% end %>
-			<% else %>
-				<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
 			<% end %>
 		</div>
+		<% unless(@twitter_work_item) %>
+			<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
+		<% end %>
 	</div>
 	<% unless(@twitter_work_item) %>
 		<div class="action-item">
