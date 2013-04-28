@@ -18,10 +18,12 @@
 		</div>
 	</div>
 	<% unless(@influencer_work_item) %>
-		<div class="action-item">
+		<div class="action_text">
 			<p>Select the market for your target influencer</p>
+		</div>
+		<div class="action-item">
 			<%= select_tag :market, options_for_select(@markets.collect{ |m| [m.name, m.id] }) %>
-			<%= button_tag "SELECT", :class => "btn-select-market btn btn-primary btn-large" %>
+			<%= button_tag "SELECT", :class => "btn-email btn-select-market btn btn-primary btn-large" %>
 		</div>
 	<% end %>
 </div>
