@@ -11,6 +11,7 @@ Sproutzly::Application.routes.draw do
   resources :users
   resources :works
   resources :influencers
+  match 'library' => 'library#index', :as => :library
 
   namespace :admin do
     root :to => 'dashboards#index'

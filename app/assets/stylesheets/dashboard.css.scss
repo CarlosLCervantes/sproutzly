@@ -31,10 +31,10 @@ div#dashboard {
 			vertical-align: top;
 		}
 
-		button {
+		a.btn, button {
 			margin-top: 28px;
 			float: right;
-			width: 90px;
+			width: 90px !important;
 		}
 	}
 
