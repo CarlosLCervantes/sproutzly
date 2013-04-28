@@ -13,4 +13,11 @@
  *= require flat-ui
  *= bootstrap-modal
  */
- @import "master";
+
+ .clear {
+ 	clear:both;
+ }
+
+ .dk_container {
+ 	width: 200px;
+ }

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require bootstrap
 //= require flat-ui
 //= require bootstrap-modalmanager
 //= require bootstrap-modal

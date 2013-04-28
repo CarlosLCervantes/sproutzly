@@ -10,7 +10,8 @@ div#dashboard {
 		-webkit-border-radius: 5px;
 
 		width: 800px;
-		margin: auto;
+		margin: 0px auto 20px auto;
+		color: #FFFFFF;
 	}
 	h2 {
 		display: inline-block;
@@ -18,10 +19,19 @@ div#dashboard {
 	}
 	div.status_item {
 		padding: 10px;
-		color: #FFFFFF;
+		
 		button {
 			margin-top: 20px;
-			float: right;
+			// float: right;
 		}
+	}
+
+	div.status-box {
+		float: right;
+	}
+
+	textarea.txt-growth {
+		width: 500px;
+		height: 100px;
 	}
 }

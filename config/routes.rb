@@ -2,8 +2,9 @@ Sproutzly::Application.routes.draw do
 
   root :to => 'homes#index'
   match 'dashboard' => 'dashboard#index'
-  match 'register' => 'users#create'
+  match 'register' => 'users#new'
   resources :users
+  resources :works
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

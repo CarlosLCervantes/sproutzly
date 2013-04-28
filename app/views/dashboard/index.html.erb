@@ -1,15 +1,20 @@
 <div id="dashboard">
 	<p class="title">Follow our 5 step program to get growing</p>
 
-	<div id="item-twitter" class="work-item">
-		<div class="status_item">
-			<%= image_tag "home/twitterCircle.png" %>
-			<h2>Get <%=  number_with_delimiter(Settings.follow_count, :delimiter => ',')  %> Twitter followers</h2>
-			<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
-		</div>
-		<div class="action-item">
-			<%= text_field_tag :twitter_handle, @twitter_handle, :placeholder => "@Sproutzly" %>
-			<%= button_tag "Submit", :class => "btn btn-primary btn-large" %>
-		</div>
-	</div>
+	<!--Twitter Item -->
+	<%= render "twitter_item" %>
+	<br class="clear" />
+	<!--FB Item-->
+	<%= render "facebook_item" %>
+	<br class="clear" />
+	<!--Influencer -->
+	<%= render "influencer_item" %>
+	<br class="clear" />
+
+	<%= render "library_item" %>
+	<br class="clear" />
+
+	<%= render "growth_item" %>
+	<br class="clear" />
+
 </div>

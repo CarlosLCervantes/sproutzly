@@ -18,10 +18,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem "twitter-bootstrap-rails"
 gem 'jquery-rails'
+gem "twitter-bootstrap-rails"
 gem 'flatui-rails'
+
+gem 'client_side_validations'
+
 gem 'settingslogic' #Used for configuration management
+
+group :development do 
+  gem 'debugger'
+end
 
 
 # To use ActiveModel has_secure_password
