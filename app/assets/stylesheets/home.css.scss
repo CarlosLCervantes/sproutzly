@@ -1,5 +1,6 @@
 div.container{
   width:1000px;
+  padding-bottom: 200px;
 }
 
 div.header {
@@ -19,17 +20,27 @@ div.header {
    }
 
    div.nav{
+    width: 190px;
     position: absolute;
     top:15px;
     right:15px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 7px;
+    text-align: center;
 
     .nav-item{
       display: inline-block;
-      background: rgba(0, 0, 0, 0.4);
+      padding:8px;
+      font-size: 18px;
+    }
 
+    #btnLogin{
+      border-right: solid 3px black;
+      width: 75px;
+    }
+
+    #btnGoPro{
+      width: 75px;
     }
 
    }
@@ -57,8 +68,8 @@ div.header {
       }
 
       .startGrowingBtnTop{
-        background-image: url('/assets/home/startGrowingBtnTop.png');
-        background-repeat: no-repeat;
+        // background-image: url('/assets/home/startGrowingBtnTop.png');
+        // background-repeat: no-repeat;
         width: 222px;
         height: 50px;
         margin-left: 253px;
@@ -71,18 +82,53 @@ div.header {
 }
 
 div.containerBody{
+  font-size: 17px;
 
   p.bodyText{
     text-align:center;
-    width:770px;
+    width: 900px;
     margin:auto;
+
+    .green{
+      color:#439700;
+      font-weight: bold;
+    }
+
+
+  }
+
+  .badages{
+    margin-left: 0px;
+    padding-top:35px;
+  }
+
+  .badageRow{
+    margin-top: 25px;
+  }
+
+  .badageAndText{
+    display: inline-block;
+    margin-left: 55px;
+
   }
 
 }
 
+.badageText{
+  padding-top: 25px;
 
+}
 
+.divider{
+  background-image: url('/assets/home/growthBorderLine.png');
+  background-repeat: repeat;
+  height: 27px;
+  margin-top: 15px;
+}
 
+.bottomRow{
+  text-align: center;
+}
 
 
 
