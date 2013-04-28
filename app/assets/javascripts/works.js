@@ -30,15 +30,15 @@ function addedTwitter() {
 
 function addFacebook() {
 	var self = $(this);
-	var parent_item = self.find("div#item-twitter");
-	var twitter_handle = self.siblings("input#twitter_handle").val().replace(" ", "");
-	if(twitter_handle.length > 0) {
+	var parent_item = self.find("div.item-facebook");
+	var facebook_url = self.siblings("input#facebook_url").val().replace(" ", "");
+	if(facebook_url.length > 0) {
 		$.ajax({
 			url: '/works',
 			method: 'POST',
-			data: { work: { value: twitter_handle, type_id: 2, type_desc: 'Twitter Follow' } },
+			data: { work: { value: facebook_url, type_id: 2, type_desc: 'Facebook Likes' } },
 			success: function(response) {
-				addedTwitter();
+				addedFacebook();
 				parent_item.fadeOut("slow");
 			}
 		});

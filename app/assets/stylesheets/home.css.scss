@@ -25,7 +25,7 @@ div.header {
    }
 
    div.nav{
-    width: 190px;
+    // width: 190px;
     position: absolute;
     top:15px;
     right:15px;
@@ -66,7 +66,7 @@ div.header {
       margin-top: 35px;
       font-family: "myriad pro";
       color: white;
-      padding:17px;
+      padding:20px 30px;
 
       .getGrowingText {
 
@@ -90,8 +90,8 @@ div.header {
         // background-repeat: no-repeat;
         width: 222px;
         height: 50px;
-        margin-left: 253px;
-        margin-top: 21px;
+        // margin-left: 253px;
+        margin: 30px auto 0px auto;
       }
 
    }
