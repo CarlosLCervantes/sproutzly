@@ -1,3 +1,4 @@
+@import "master";
 div.lib-section {
 	margin-bottom:15px;
 	div {
@@ -16,6 +17,7 @@ div.lib-section {
 	}
 	i {
 		float: right;
+		color: $dark_green;
 	}
 	p {
 		padding: 10px 15px;

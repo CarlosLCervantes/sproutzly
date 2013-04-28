@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("button.btn-twitter-add").bind("click", addTwitter);
-	$("button.btn-facebook-add").bind("click", addTwitter);
+	$("button.btn-facebook-add").bind("click", addFacebook);
 	$("button.btn-select-inf-market").bind("click", influencerMarketSelected);
 });
 
