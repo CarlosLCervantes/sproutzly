@@ -1,5 +1,6 @@
 div.container{
   width:1000px;
+  padding-bottom: 200px;
 }
 
 div.header {
@@ -7,6 +8,7 @@ div.header {
    width: 1000px;
    height: 360px;
    position: relative;
+   border-bottom: solid 10px black;
 
    .overlay{
       margin-left: 20px;
@@ -19,46 +21,60 @@ div.header {
    }
 
    div.nav{
+    width: 190px;
     position: absolute;
     top:15px;
     right:15px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 7px;
+    text-align: center;
 
     .nav-item{
       display: inline-block;
-      background: rgba(0, 0, 0, 0.4);
+      padding:8px;
+      font-size: 18px;
+    }
 
+    #btnLogin{
+      border-right: solid 3px black;
+      width: 75px;
+    }
+
+    #btnGoPro{
+      width: 75px;
     }
 
    }
 
    .getGrowingBg{
-      // background-color: black;
       background: rgba(0, 0, 0, 0.4);
-      width: 700px;
-      height: 225px;
+      width: 662px;
+      height: 195px;
       margin-top: 12px;
       font-family: "myriad pro";
       color: white;
-      padding:15px;
+      padding:17px;
 
       .getGrowingText {
 
         h1{
-          font-size: 50px;
+          font-family: 'Varela Round';
+          font-size: 48px;
+          text-shadow: 2px 4.5px 4px #000000;
+          filter: dropshadow(color=#000000, offx=5, offy=2);
+          font-weight: none;
         }
 
         h2{
-          font-size: 33px;
+          font-size: 25px;
+          font-family: verdana;
         }
 
       }
 
       .startGrowingBtnTop{
-        background-image: url('/assets/home/startGrowingBtnTop.png');
-        background-repeat: no-repeat;
+        // background-image: url('/assets/home/startGrowingBtnTop.png');
+        // background-repeat: no-repeat;
         width: 222px;
         height: 50px;
         margin-left: 253px;
@@ -71,18 +87,62 @@ div.header {
 }
 
 div.containerBody{
+  font-size: 17px;
 
   p.bodyText{
     text-align:center;
-    width:770px;
+    width: 900px;
     margin:auto;
+    font-family: georgia;
+    line-height: 26px;
+
+    .green{
+      color:#439700;
+      font-weight: bold;
+    }
+
+
+  }
+
+  .badages{
+    margin-left: 0px;
+    padding-top:35px;
+  }
+
+  .badageRow{
+    margin-top: 25px;
+  }
+
+  .badageAndText{
+    display: inline-block;
+    margin-left: 63px;
+
+    p{
+      font-family: "FF Nuvo Web Pro";
+      font-weight: bold;
+      margin-left: 40px;
+    }
+
   }
 
 }
 
+.badageText{
+  padding-top: 25px;
 
+}
 
+.divider{
+  background-image: url('/assets/home/growthBorderLine.png');
+  background-repeat: repeat;
+  height: 27px;
+  margin-top: 15px;
+}
 
+.bottomRow{
+  text-align: center;
+  font-family: georgia;
+}
 
 
 
