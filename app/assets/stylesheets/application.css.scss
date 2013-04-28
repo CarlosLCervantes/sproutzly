@@ -26,34 +26,17 @@ img.main-logo {
  }
 
  .dk_container {
- 	z-index:999 !important;
  	width: 200px;
  }
 
- p.bodyText{
- 	font-size: 17px;
-  text-align:center;
-  width: 900px;
-  margin:auto;
-  font-family: georgia;
-  line-height: 26px;
+div.footer-btn-twitter-fb{
+  padding-top: 16px;
+
+  .spacer{
+    padding-right: 100px;
+  }
 }
 
-.highlight {
-	color:#439700;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-shadow: 2px 3px 3px #000000;
-	filter: dropshadow(color=#000000, offx=5, offy=2);
+footer{
+  margin-top: 30px;
 }
-
-.green{
-  color:#439700;
-  font-weight: bold;
-}
-
-
-
- // .dk_container * {
- // 	z-index:99 !important;
- // }
