@@ -5,8 +5,9 @@
 		<div class="status_item">
 			<%= image_tag "home/twitterCircle.png" %>
 			<h2>Get <%=  number_with_delimiter(Settings.follow_count, :delimiter => ',')  %> Twitter followers</h2>
+			<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
 		</div>
-		<div class="action-item" style="display:none">
+		<div class="action-item">
 			<%= text_field_tag :twitter_handle, @twitter_handle, :placeholder => "@Sproutzly" %>
 			<%= button_tag "Submit", :class => "btn btn-primary btn-large" %>
 		</div>

@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 //= require flat-ui
+//= require bootstrap-modalmanager
+//= require bootstrap-modal

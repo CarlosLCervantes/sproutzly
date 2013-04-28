@@ -43,7 +43,7 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span12">
-          <%#= bootstrap_flash %>
+          <%= bootstrap_flash %>
           <%= yield %>
         </div>
       </div><!--/row-->
@@ -57,6 +57,7 @@
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <%= render 'shared/inline_global_js' %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

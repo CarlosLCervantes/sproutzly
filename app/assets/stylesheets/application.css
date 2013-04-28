@@ -11,5 +11,6 @@
  *= require_self
  *= require_tree .
  *= require flat-ui
+ *= bootstrap-modal
  */
  /*@import 'master'*/

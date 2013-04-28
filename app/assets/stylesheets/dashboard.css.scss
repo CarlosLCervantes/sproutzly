@@ -20,5 +20,9 @@ div#dashboard {
 	div.status_item {
 		padding: 10px;
 		color: #FFFFFF;
+		button {
+			margin-top: 20px;
+			float: right;
+		}
 	}
 }
