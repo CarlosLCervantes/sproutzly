@@ -18,8 +18,9 @@ div#dashboard {
 		margin-left: 15px;
 	}
 	div.status_item {
-		padding: 10px;
-		
+		padding: 10px 10px 20px 10px;
+		border-bottom: solid 1px #00661a;
+
 		button {
 			margin-top: 20px;
 			// float: right;
@@ -34,4 +35,27 @@ div#dashboard {
 		width: 500px;
 		height: 100px;
 	}
+
+	div.action_text{
+		padding: 10px 10px 0px 10px;
+
+		p{
+			font-size: 17px;
+		}
+	}
+
+	div.action-item{
+		padding: 10px;
+
+	}
+
+	.txt-email{
+		float: left;
+	}
+
+	.btn-twitter-add{
+		float: right;
+	}
+
+
 }
