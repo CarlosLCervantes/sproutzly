@@ -1,7 +1,12 @@
+div.container{
+  width:1000px;
+}
+
 div.header {
    background-image: url('/assets/home/banner.png');
    width: 1000px;
    height: 360px;
+   position: relative;
 
    .overlay{
       margin-left: 20px;
@@ -11,6 +16,22 @@ div.header {
       background-image: url('/assets/home/logoSmall.png');
       width: 200px;
       height: 68px;
+   }
+
+   div.nav{
+    position: absolute;
+    top:15px;
+    right:15px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 7px;
+
+    .nav-item{
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.4);
+
+    }
+
    }
 
    .getGrowingBg{
@@ -45,4 +66,39 @@ div.header {
       }
 
    }
+
+
 }
+
+div.containerBody{
+
+  p.bodyText{
+    text-align:center;
+    width:770px;
+    margin:auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
