@@ -3,10 +3,14 @@ $(document).ready(function() {
 	$("button.btn-start-wi").bind("click", startAction);
 });
 
-function startAction() {
+function startAction(e) {
 	checkLogin();
+	console.log(e);
+
 	var self = $(this);
-	var action_item = self.parents("div#item-twitter").find("div.action-item");
+	var parentId = 'div#' + $(e.currentTarget).parent().parent().parent().first().attr('id');
+	var action_item = self.parents(parentId).find("div.action-item");
+	// var action_item = self.parents("div#item-twitter").find("div.action-item");
 	//debug(action_item.length);
 	action_item.slideDown("slow");
 }
@@ -29,5 +33,5 @@ function showSignup() {
 			alert("error");s
 		}
 	});
-	
+
 }
