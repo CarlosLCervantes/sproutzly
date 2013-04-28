@@ -1,14 +1,20 @@
 div#addon{
 
+  p{
+    font-size: 18px;
+  }
+
   div.addonRow{
-    margin: 0 0 10px;
+
+    margin-top: 30px;
+
 
     .block{
       background-color: #fff;
       border: 1px solid #7ebc56;
       -webkit-border-radius: 4px;
       text-align: center;
-      padding: 20px 5px 20px 5px;
+      padding: 20px 5px 28px 5px;
 
       h2{
         font-size: 33px;
@@ -18,8 +24,6 @@ div#addon{
     }
 
     .innerBlock{
-      // min-height: 200px;
-      // width: 200px;
       margin-left: 30%;
       margin-top: 10px;
       background-color: #fff;
