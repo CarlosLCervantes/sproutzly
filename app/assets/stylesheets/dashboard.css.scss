@@ -16,10 +16,11 @@ div#dashboard {
 	h2 {
 		display: inline-block;
 		margin-left: 15px;
+		font-size: 33px;
 	}
 	div.status_item {
-		padding: 10px 10px 20px 10px;
-		border-bottom: solid 1px #00661a;
+		padding: 16px 10px 20px 10px;
+		border-bottom: dotted 3px #00661a;
 
 		button {
 			margin-top: 20px;
@@ -51,9 +52,18 @@ div#dashboard {
 
 	.txt-email{
 		float: left;
+		font-size: 23px;
 	}
 
-	.btn-twitter-add{
+	#twitter_handle{
+		width: 375px;
+	}
+
+	#facebook_url{
+		width: 550px;
+	}
+
+	.btn-email{
 		float: right;
 	}
 
