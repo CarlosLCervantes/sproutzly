@@ -20,6 +20,7 @@
 
 $(document).ready(function() {
 	$("a.btn-continue").bind("click", continueToDash);
+	$("#btnSubscribeNewsletter").bind("click", subscribeNewsletter);
 });
 
 function continueToDash() {
@@ -43,9 +44,53 @@ function showSignup() {
 		method: "GET",
 		success: function(response) {
 			create_dynamic_modal(response).modal('show');
+			$("#btnRegister").bind("click", register);
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
 			alert("error");s
+		}
+	});
+}
+
+function register(e) {
+	e.preventDefault();
+	var self = $(this);
+	var form = self.closest("form");
+	var errors_list = form.find("ul.errors-list");
+	errors_list.empty();
+	$.ajax({
+    url: form.attr("action"),
+    type: "POST",
+    data: $(form).serialize(),
+    dataType: "json",
+    success: function(data) {
+      logged_in = true;
+      window.location = "/dashboard";
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      //src.show();
+      //self.find("#regWorking").hide();
+      var errors = $.parseJSON(jqXHR.responseText).errors;
+      for(i = 0; i < errors.length; i++) {
+        errors_list.append("<li>" + errors[i] + "</li>");
+      }
+    }
+  });
+}
+
+function subscribeNewsletter(e) {
+	var email = $("input#newsletter_email").val();
+	debug(email);
+	$.ajax({
+		url: "/subscribe",
+		method: "post",
+		data: {email: email},
+		success: function(response) {
+			//create_dynamic_modal(response).modal('show');
+			//$("#btnRegister").bind("click", register);
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			//alert("error");
 		}
 	});
 }

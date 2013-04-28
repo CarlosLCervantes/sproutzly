@@ -1,3 +1,5 @@
+@import "master";
+
 div.container{
   // width:1000px;
   // padding-bottom: 200px;
@@ -99,7 +101,7 @@ div.header {
 
 }
 
-div.containerBody{
+div.containerBody {
   font-size: 17px;
 
   .badages{
@@ -141,3 +143,26 @@ div.containerBody{
   text-align: center;
   font-family: georgia;
 }
+
+div.newsletter {
+  p.call {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  margin-top: 100px;
+  padding: 15px 10px;
+  background-color: $light_green;
+  border: 3px solid $dark_green;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  button {
+    margin-top: -4px;
+  }
+  .txt-newsletter {
+    height: 30px;
+    width: 500px;
+    font-size: 20px;
+  }  
+}
+

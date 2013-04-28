@@ -129,6 +129,13 @@
     </div> <!-- end badageRow -->
 
     </div> <!--end badages-->
+    <div class="row newsletter" style="text-align:center">
+      <p class="call">Sign up for our Newsletter and get great advice for building your online brand and special promotions!</p>
+      <%= text_field_tag :newsletter_email, "", :class => "txt-newsletter", :placeholder => "YourEmail@website.com" %>
+      <%= button_tag "Subscribe", :id => "btnSubscribeNewsletter", :class => "btn btn-primary btn-large" %>
+      <br />
+      Powered By: <%= image_tag "http://nonna-template.startupweekend.org/files/2012/01/SendGrid.png" %>
+    </div>
 
     <div class="row" style="text-align:center">
       <hr />
