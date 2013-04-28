@@ -20,6 +20,16 @@
     <%#= render 'shared/ga' %>
   </head>
   <body>
+    //Says to include fb js right after body tag
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -83,16 +93,9 @@
                   <div class="footer-btn-twitter-fb">
 
                   <div id="fb-root"></div>
-                  <script>(function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-                    fjs.parentNode.insertBefore(js, fjs);
-                  }(document, 'script', 'facebook-jssdk'));</script>
 
-                  <div class="fb-like" data-href="http://www.facebook.com/Sproutzly" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
-                  </div>
+
+                 <div class="fb-like" data-href="http://www.facebook.com/Sproutzly" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-font="verdana"></div>
                 </li>
 
                 <!--<li><%#= link_to "Link3", "/path3"  %></li> -->
