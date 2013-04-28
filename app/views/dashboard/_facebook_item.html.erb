@@ -19,8 +19,12 @@
 	</div>
 	<% unless(@facebook_work_item) %>
 		<div class="action-item">
-			<%= text_field_tag :facebook_url, @facebook_work_item.try(:value), :placeholder => "http://www.facebook.com/sproutzly" %>
-			<%= button_tag "Submit", :class => "btn-facebook-add btn btn-primary btn-large" %>
+			<div class="action_text">
+				<p>Give us your Facebook and we can get started. You can expect to see fans trickling in over the next week.</p>
+			</div>
+			<%= text_field_tag :facebook_url, @facebook_work_item.try(:value), :placeholder => "http://www.facebook.com/sproutzly", :class=> "txt-email" %>
+			<%= button_tag "Submit", :class => "btn-email btn-facebook-add btn btn-primary btn-large" %>
+				<br class="clear">
 		</div>
 	<% end %>
 </div>

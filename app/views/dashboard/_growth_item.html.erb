@@ -14,10 +14,13 @@
 	</div>
 	<% unless(@growth_work_item) %>
 		<div class="action-item">
-			<p>Tell us a little bit about your goal:</p>
+
+			<div class="action_text">
+				<p>Tell us a little bit about your goal:</p>
+			</div>
 			<%#= select_tag :market, options_for_select(@markets.collect{ |m| [m.name, m.id] }) %>
 			<%= text_area_tag :goal_text, "", :class => "txt-growth" %>
-			<%= button_tag "DONE", :class => "btn-select-growth btn btn-primary btn-large" %>
+			<%= button_tag "DONE", :class => "btn-email btn-select-growth btn btn-primary btn-large" %>
 		</div>
 	<% end %>
 </div>
