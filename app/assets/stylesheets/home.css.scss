@@ -1,7 +1,12 @@
+div.container{
+  width:1000px;
+}
+
 div.header {
    background-image: url('/assets/home/banner.png');
    width: 1000px;
    height: 360px;
+   position: relative;
 
    .overlay{
       margin-left: 20px;
@@ -13,14 +18,87 @@ div.header {
       height: 68px;
    }
 
+   div.nav{
+    position: absolute;
+    top:15px;
+    right:15px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 7px;
+
+    .nav-item{
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.4);
+
+    }
+
+   }
+
    .getGrowingBg{
       // background-color: black;
       background: rgba(0, 0, 0, 0.4);
       width: 700px;
       height: 225px;
       margin-top: 12px;
-      font-family: 'myriad pro';
+      font-family: "myriad pro";
       color: white;
+      padding:15px;
+
+      .getGrowingText {
+
+        h1{
+          font-size: 50px;
+        }
+
+        h2{
+          font-size: 33px;
+        }
+
+      }
+
+      .startGrowingBtnTop{
+        background-image: url('/assets/home/startGrowingBtnTop.png');
+        background-repeat: no-repeat;
+        width: 222px;
+        height: 50px;
+        margin-left: 253px;
+        margin-top: 21px;
+      }
 
    }
+
+
 }
+
+div.containerBody{
+
+  p.bodyText{
+    text-align:center;
+    width:770px;
+    margin:auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
