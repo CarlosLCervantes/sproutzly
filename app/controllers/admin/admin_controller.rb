@@ -1,14 +1,17 @@
 class Admin::AdminController < ApplicationController
 	layout 'admin'
 	before_filter :authorize
+	helper_method :admin_logged_in
+
 
 	def authorize
-		if session[:admin_user_id]
-			redirect_to root_url
-		else
+		unless admin_logged_in?
 			redirect_to admin_login_url, notice: "Please log in"
 		end
 	end
 
+	def admin_logged_in?
+		session[:admin_user_id].nil? ? false : true
+	end
 
 end

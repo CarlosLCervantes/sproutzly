@@ -1,0 +1,15 @@
+<div class="login-fields">
+<%= form_tag admin_sessions_path, :method => :post do %>
+  <div class="control-group">
+    <%= label_tag 'user name' %>
+    <div class="controls"><%= text_field_tag :user_name %></div>
+  </div>
+  <div class="control-group">
+    <%= label_tag :password %>
+    <div class="controls"><%= password_field_tag :password %></div>
+  </div>
+  <div class="actions">
+    <%= submit_tag 'Login Now', :class => 'btn btn-primary btn-large' %>
+  </div>
+<% end %>
+</div>

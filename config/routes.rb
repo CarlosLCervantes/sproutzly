@@ -3,8 +3,21 @@ Sproutzly::Application.routes.draw do
   root :to => 'homes#index'
   match 'dashboard' => 'dashboard#index'
   match 'register' => 'users#new'
+  resources :sessions
+  match 'login' => 'sessions#new'
+  match 'logout' => 'sessions#destroy'
   resources :users
   resources :works
+
+  namespace :admin do
+    root :to => 'dashboards#index'
+    match 'login' => 'sessions#new'
+    match 'logout' => 'sessions#destroy'
+    resources :sessions
+    resources :works
+    resources :billings
+    resources :influencers
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

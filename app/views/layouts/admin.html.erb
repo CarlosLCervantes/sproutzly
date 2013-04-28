@@ -19,7 +19,7 @@
     <%= yield :head %>
     <%#= render 'shared/ga' %>
   </head>
-  <body>
+  <body class="admin">
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -35,9 +35,9 @@
             <ul class="nav">
             </ul>
             <ul class="nav pull-right"> 
-              <li><%= link_to "Settings", "/settings", :class => "nl"  %></li>
-              <li><%= link_to "Logout", logout_path, :class => "nl" %></li>
-              <!--<li><%#= link_to "Link3", "/path3"  %></li> -->
+              <!-- <li><%#= link_to "Settings", "/settings", :class => "nl"  %></li> -->
+              <!-- <li><%#= link_to "Link2", "/path2"  %></li>
+              <li><%#= link_to "Link3", "/path3"  %></li> -->
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -45,15 +45,10 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span12">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-      </div><!--/row-->
-
+      <%= bootstrap_flash %>
+      <%= yield %>
       <footer>
-        <p>&copy; Sproutzly 2013</p>
+        <p>&copy;Sproutzly 2013</p>
       </footer>
     </div> <!-- /container -->
 

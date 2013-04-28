@@ -4,3 +4,17 @@
 	color: $dark-green;
 	margin: 0px;
 }
+
+/*Sessions CSS*/
+div.login-box {
+	margin: auto;
+	width: 500px;
+	text-align: center;
+}
+
+div.login-fields {
+	input[type=text], input[type=password] {
+		text-align: center;
+	}
+	text-align:center;
+}

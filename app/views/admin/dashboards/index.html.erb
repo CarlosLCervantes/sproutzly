@@ -1,0 +1,28 @@
+<h1>Admin Dashboard</h1>
+<div id="admin-dashboard" class="row-fluid">
+  
+    <div class="span4 dash-item">
+      <a href="<%= admin_works_path %>">
+      <%= image_tag "illustrations/mail.png", :class => "big-illustration-pusher" %>
+      <h2>Work Orders</h2>
+      </a>
+    </div>
+  
+    <div class="span4 dash-item">
+      <a href="<%= admin_billings_path %>">
+      <%= image_tag "illustrations/clipboard.png", :class => "big-illustration-pusher" %>
+      <h2>Billings</h2>
+      </a>
+    </div>
+  
+  
+  <div class="span4 dash-item">
+    <a href="<%= admin_influencers_path %>">
+    <!-- <a href="<%= admin_influencers_path %>"> -->
+      <span class="gicon fui-man-24"></span>
+      <h2>Influencers</h2>
+    <!-- </a> -->
+    </a>
+  </div>
+  
+</div>

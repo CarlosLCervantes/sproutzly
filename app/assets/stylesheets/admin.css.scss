@@ -1,0 +1,51 @@
+@import "master";
+
+body.admin {
+
+	div.container-fluid {
+		// width: 980px;
+	}
+
+	div#admin-login-box {
+		width: 500px;
+		text-align: center;
+		margin:auto;
+		img {
+			margin: auto;
+		}
+		div.login-fields {
+			border: 1px solid $light_green;
+			border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+		}
+		.button {
+
+		}
+	}
+
+	div#admin-dashboard{
+
+		
+	}
+
+	div.dash-item {
+		a {
+			text-decoration: none;
+		}
+		span.gicon {
+			font-size: 160px;
+			color: #1ABC9C;
+			text-decoration: none;
+		}
+		padding: 15px;
+		text-align: center;
+		border: 3px solid $dark_green;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+	}
+
+	
+
+}
