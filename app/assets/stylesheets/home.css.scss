@@ -8,6 +8,7 @@ div.header {
    width: 1000px;
    height: 360px;
    position: relative;
+   border-bottom: solid 10px black;
 
    .overlay{
       margin-left: 20px;
@@ -46,7 +47,6 @@ div.header {
    }
 
    .getGrowingBg{
-      // background-color: black;
       background: rgba(0, 0, 0, 0.4);
       width: 662px;
       height: 195px;
@@ -115,11 +115,12 @@ div.containerBody{
 
   .badageAndText{
     display: inline-block;
-    margin-left: 55px;
+    margin-left: 63px;
 
     p{
       font-family: "FF Nuvo Web Pro";
       font-weight: bold;
+      margin-left: 40px;
     }
 
   }
@@ -140,6 +141,7 @@ div.containerBody{
 
 .bottomRow{
   text-align: center;
+  font-family: georgia;
 }
 
 
