@@ -1,0 +1,16 @@
+ @import "master";
+
+ div.navbar, div.navbar-inner, div.navbar-inner div.container-fluid{
+ 	background-color: #000000;
+ 	background-image: none;
+ }
+
+ .navbar .nav > li > a.nl , .navbar .nav > li > a:visited {
+ 	color: #FFFFFF;
+ 	text-shadow: 0px 1px 0px $light_green;
+ }
+
+ .navbar a.brand {
+ 	margin: 0px;
+ 	padding: 2px 0px 0px 0px;
+ }

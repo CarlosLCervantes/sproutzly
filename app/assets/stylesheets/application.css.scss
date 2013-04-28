@@ -12,7 +12,14 @@
  *= require_tree .
  *= require flat-ui
  *= bootstrap-modal
+ *= bootstrap/bootstrap-overrides
  */
+
+img.main-logo {
+ 	width: 125px;
+ 	margin: 0px;
+ 	padding: 0px;
+ }
 
  .clear {
  	clear:both;
