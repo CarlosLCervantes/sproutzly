@@ -23,10 +23,10 @@ gem "twitter-bootstrap-rails"
 gem 'flatui-rails'
 
 gem 'client_side_validations'
-
+gem 'stripe'
 gem 'settingslogic' #Used for configuration management
 
-group :development do 
+group :development do
   gem 'debugger'
 end
 
