@@ -1,6 +1,8 @@
 Sproutzly::Application.routes.draw do
 
   root :to => 'homes#index'
+  match 'addon' => 'addon#index'
+  resources :addons
   match 'dashboard' => 'dashboard#index'
   match 'register' => 'users#new'
   resources :sessions
