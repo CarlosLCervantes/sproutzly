@@ -1,0 +1,26 @@
+<div id="item-twitter" class="work-item">
+	<div class="status_item">
+		<%= image_tag "home/twitterCircle.png" %>
+		<h2>Get <%=  number_with_delimiter(Settings.follow_count, :delimiter => ',')  %> Twitter followers</h2>
+		<div class="status-box">
+			<% if(@twitter_work_item) %>
+				<% if(@twitter_work_item.done?) %>
+					<h3>Work Complete!</h3>
+				<% elsif(@twitter_work_item) %>
+					<h3>Work in Progress...</h3>
+					<p>Work can take up to 5 days to completely process</p>
+				<%# else %>
+					<!-- <button>Cancel</button> -->
+				<% end %>
+			<% else %>
+				<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
+			<% end %>
+		</div>
+	</div>
+	<% unless(@twitter_work_item) %>
+		<div class="action-item">
+			<%= text_field_tag :twitter_handle, @twitter_work_item.try(:value), :placeholder => "@Sproutzly" %>
+			<%= button_tag "Submit", :class => "btn-twitter-add btn btn-primary btn-large" %>
+		</div>
+	<% end %>
+</div>

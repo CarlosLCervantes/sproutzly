@@ -1,0 +1,23 @@
+<div id="item-growth" class="work-item">
+	<div class="status_item">
+		<%= image_tag "home/growthCircle.png" %>
+		<h2>Get a Growth Strategy</h2>
+		<div class="status-box">
+			<% if(@growth_work_item) %>
+				<% if(@growth_work_item.done?) %>
+					<h3>Work Complete!</h3>
+				<% end %>
+			<% else %>
+				<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
+			<% end %>
+		</div>
+	</div>
+	<% unless(@growth_work_item) %>
+		<div class="action-item">
+			<p>Tell us a little bit about your goal:</p>
+			<%#= select_tag :market, options_for_select(@markets.collect{ |m| [m.name, m.id] }) %>
+			<%= text_area_tag :goal_text, "", :class => "txt-growth" %>
+			<%= button_tag "DONE", :class => "btn-select-growth btn btn-primary btn-large" %>
+		</div>
+	<% end %>
+</div>

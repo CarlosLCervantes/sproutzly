@@ -1,0 +1,26 @@
+<div id="item-facebook" class="work-item">
+	<div class="status_item">
+		<%= image_tag "home/facebookCircle.png" %>
+		<h2>Get <%=  number_with_delimiter(Settings.like_count, :delimiter => ',')  %> Facebook fans</h2>
+		<div class="status-box">
+			<% if(@facebook_work_item) %>
+				<% if(@facebook_work_item.done?) %>
+					<h3>Work Complete!</h3>
+				<% elsif(@facebook_work_item) %>
+					<h3>Work in Progress...</h3>
+					<p>Work can take up to 5 days to completely process</p>
+				<%# else %>
+					<!-- <button>Cancel</button> -->
+				<% end %>
+			<% else %>
+				<%= button_tag "START", :class => "btn-start-wi btn btn-primary btn-large" %>
+			<% end %>
+		</div>
+	</div>
+	<% unless(@facebook_work_item) %>
+		<div class="action-item">
+			<%= text_field_tag :facebook_url, @facebook_work_item.try(:value), :placeholder => "http://www.facebook.com/sproutzly" %>
+			<%= button_tag "Submit", :class => "btn-facebook-add btn btn-primary btn-large" %>
+		</div>
+	<% end %>
+</div>
