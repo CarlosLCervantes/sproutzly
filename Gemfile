@@ -27,6 +27,10 @@ gem 'client_side_validations'
 gem 'stripe'
 gem 'settingslogic' #Used for configuration management
 
+#group :production do
+	gem 'newrelic_rpm'
+#end
+
 group :development do
   gem 'debugger'
 end
